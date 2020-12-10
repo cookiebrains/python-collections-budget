@@ -25,3 +25,5 @@ ax.set_title('# of Purchases by Category')
 plt.show()
 
 # This is a comment
+# This is another comment
+
