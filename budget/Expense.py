@@ -1,6 +1,7 @@
 import csv
 from datetime import datetime
 
+
 class Expense():
     def __init__(self, date_str, vendor, category, amount):
         self.date_time = datetime.strptime(date_str, '%m/%d/%Y %H:%M:%S')
@@ -21,7 +22,7 @@ class Expenses():
             for row in csvreader:
                 if '-' not in row[3]:
                     continue
-                amount = float((row[3][2:]).replace(',',''))
+                amount = float((row[3][2:]).replace(',', ''))
                 self.list.append(Expense(row[0],row[1], row[2], amount))
                 self.sum += amount
 
